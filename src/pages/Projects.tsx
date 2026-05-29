@@ -17,6 +17,15 @@ export default function Projects() {
               <h3>{project.name}</h3>
             </div>
             <p className="project-summary">{project.summary}</p>
+            {project.links?.length ? (
+              <div className="project-links">
+                {project.links.map((link) => (
+                  <a key={link.url} href={link.url} target="_blank" rel="noreferrer">
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            ) : null}
             <ul>
               {project.highlights.map((highlight) => (
                 <li key={highlight}>{highlight}</li>

@@ -38,6 +38,12 @@ export default function Contact() {
               <span key={skill}>{skill}</span>
             ))}
           </div>
+          <h3 style={{ marginTop: '24px' }}>Soft skills</h3>
+          <div className="skills-grid">
+            {profile.softSkills?.map((skill) => (
+              <span key={skill}>{skill}</span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

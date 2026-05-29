@@ -42,6 +42,24 @@ export default function Home() {
         </div>
       </div>
       <div className="feature-strip">
+        <div className="glass-card info-card">
+          <h3>Core specialties</h3>
+          <div className="skills-grid">
+            {profile.skills.map((skill) => (
+              <span key={skill}>{skill}</span>
+            ))}
+          </div>
+        </div>
+        <div className="glass-card info-card">
+          <h3>Soft skills</h3>
+          <div className="skills-grid">
+            {profile.softSkills?.map((skill) => (
+              <span key={skill}>{skill}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="feature-strip">
         <div>
           <h2>Education</h2>
           <p>
